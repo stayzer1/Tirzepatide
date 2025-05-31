@@ -1,0 +1,51 @@
+.doubts {
+  padding-top: 60px;
+  padding-bottom: clamp(3.75rem, 2.357rem + 5.714vw, 7.5rem);
+}
+.doubts__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $black;
+  border-radius: 40px;
+  padding: 24px 60px;
+}
+.doubts__title {
+  font: 700 32px / 140% $font-family;
+  color: $white;
+}
+.doubts__descr {
+  font: 300 14px / 140% $font-family;
+  color: $white;
+}
+.doubts__btn {
+  background: $white;
+  color: $blue;
+}
+.doubts__btn:hover {
+  background: $blue;
+  color: $white;
+}
+.btn {
+}
+@media screen and (max-width: 1200px) {
+  .doubts__title {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .doubts__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .doubts__descr {
+    padding-bottom: 16px;
+    text-align: center;
+  }
+  .doubts__title {
+    max-width: 100%;
+    text-align: center;
+  }
+}

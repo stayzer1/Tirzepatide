@@ -1,0 +1,70 @@
+// Header
+.navbar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: clamp(8.875rem, 5.78rem + 12.698vw, 11.875rem);
+  height: clamp(1.5rem, 0.984rem + 2.116vw, 2rem);
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.625rem, -1.089rem + 3.571vw, 2.125rem);
+}
+.menu__item {
+}
+
+.menu__item-link {
+  font: 500 16px $font-family;
+  color: $black;
+  position: relative;
+}
+.menu__item-link::after,
+.menu__item-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #6c97eb, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.menu__item-link::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.menu__item-link:hover::after,
+.menu__item-link:hover::before {
+  transform: scaleX(1);
+}
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 100px;
+  padding: 12px clamp(1.25rem, 0.992rem + 1.058vw, 1.5rem);
+  background: $blue-15;
+  font: 600 clamp(0.75rem, 0.704rem + 0.19vw, 0.875rem) $font-family;
+  color: $blue;
+  transition: all 0.3s ease;
+}
+.header__button:hover {
+  background: $blue;
+  color: $white;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,60 @@
+.reviews {
+  padding: clamp(2.5rem, 2.036rem + 1.905vw, 3.75rem) 0;
+  background: $blue;
+  border-radius: 40px;
+}
+.reviews__title {
+  font: 700 clamp(2rem, 1.814rem + 0.762vw, 2.5rem) $font-family;
+  color: $white;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.splide__track {
+}
+.reviews .splide__list,
+.reviews .splide__track {
+  padding: 40px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE и Edge */
+}
+.reviews .splide__track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.reviews .splide__slide {
+  background: $white;
+  height: fit-content;
+  border-radius: 16px;
+  padding: 24px 16px;
+  max-width: 340px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: inherit;
+}
+.splide__quotes {
+  font: 400 128px $font-family;
+  letter-spacing: 0em;
+  color: $black;
+  position: absolute;
+  left: 10px;
+  top: -50px;
+}
+.reviews .splide__arrows {
+  transform: translateY(-110px);
+}
+.splide__text {
+  font: 300 13px / 140% $font-family;
+  color: $black;
+}
+.splide__author {
+  font: 700 16px / 140% $font-family;
+  color: $black;
+  text-align: right;
+}
+@media screen and (max-width: 450px) {
+  .reviews .splide__arrows {
+    transform: translateY(-65px);
+  }
+}

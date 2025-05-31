@@ -1,0 +1,99 @@
+.faq {
+  padding-top: clamp(3.75rem, 2.357rem + 5.714vw, 7.5rem);
+  padding-bottom: clamp(3.75rem, 3.286rem + 1.905vw, 5rem);
+}
+.faq__title {
+  font: 700 clamp(2rem, 1.814rem + 0.762vw, 2.5rem) $font-family;
+  color: $black;
+  text-align: center;
+  padding-bottom: 16px;
+}
+.faq__subtitle {
+  font: 300 clamp(0.875rem, 0.829rem + 0.19vw, 1rem) $font-family;
+  color: $black;
+  text-align: center;
+  opacity: 0.5;
+  max-width: 680px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  .accordion__item {
+    width: calc(33% - 10px);
+
+    &.accordion__item-active {
+      .accordion__item-content {
+        display: block;
+      }
+      border: 1px solid $blue;
+      border-radius: 40px;
+    }
+
+    .accordion__item-trigger {
+      display: flex;
+      border-radius: 40px;
+      padding: 16px 24px;
+      background: $blue;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+
+      .trigger__num {
+        font: 400 128px / 140% $font-family;
+        letter-spacing: 0em;
+        color: $black;
+        position: absolute;
+        left: 20px;
+        top: -50px;
+      }
+
+      .trigger__text {
+        font: 300 16px / 140% $font-family;
+        color: $white;
+      }
+    }
+
+    .accordion__item-content {
+      padding: 24px 0;
+      display: none;
+      animation: fade 0.3s ease;
+
+      .content__text {
+        margin-top: 16px;
+        padding: 0 24px;
+        font: 300 14px / 140% $font-family;
+        color: $black;
+
+        &:first-child {
+          margin-top: 0;
+        }
+        strong {
+          font: 600 14px / 140% $font-family;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .accordion {
+    justify-content: center;
+    .accordion__item {
+      width: calc(50% - 10px);
+    }
+  }
+  .accordion__item {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .accordion {
+    .accordion__item {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.compare {
+  padding-top: clamp(3.75rem, 2.357rem + 5.714vw, 7.5rem);
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+.compare__title {
+  font: 700 clamp(2rem, 1.814rem + 0.762vw, 2.5rem) $font-family;
+  text-align: center;
+  color: $black;
+  padding-bottom: 40px;
+}
+.compare__table {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  background: #fff;
+  border-radius: 12px;
+  overflow: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  font-family: inherit;
+  min-width: 600px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.compare__row {
+  display: contents;
+}
+
+.compare__row > div {
+  padding: 10px 0;
+  text-align: left;
+}
+.compare__row span {
+  padding: 10px 14px;
+  display: block;
+  height: 100%;
+  font: 400 clamp(0.875rem, 0.736rem + 0.571vw, 1.25rem) $font-family;
+  color: $black;
+  text-align: center;
+}
+
+.compare__row--header > div {
+  background: #222;
+  font: 700 clamp(0.875rem, 0.736rem + 0.571vw, 1.25rem) $font-family;
+  color: $white;
+  text-align: center;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare__row--header > div:first-child {
+  background: #222;
+  border-radius: 12px 0 0 0;
+}
+
+.compare__row--header > div:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.compare__cell--highlight {
+  color: #222;
+}
+.compare__cell--highlight span {
+  background: $blue-15;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare__row:last-child > div {
+  border-bottom: none;
+}
+.compare__row .compare__row--title {
+  font: 700 clamp(0.875rem, 0.736rem + 0.571vw, 1.25rem) $font-family;
+  color: $black;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+/* Горизонтальный скролл на мобильных */
+@media screen and (max-width: 800px) {
+  .compare__table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .compare__table {
+    min-width: 600px;
+    width: 100%;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+  }
+  .compare__table::-webkit-scrollbar {
+    height: 6px;
+    background: #f0f0f0;
+  }
+  .compare__table::-webkit-scrollbar-thumb {
+    background: #b3c6e6;
+    border-radius: 3px;
+  }
+}
